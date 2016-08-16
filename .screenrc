@@ -1,0 +1,23 @@
+startup_message off
+vbell off
+
+termcapinfo rxvt-unicode ti@:te@
+terminfo rxvt-unicode ti@:te@:
+term screen-256color
+
+screen -t root 0 sudo su -
+screen -t bash 1 -bash
+screen -t bash 2 -bash
+screen -t bash 3 -bash
+screen -t htop 4 -bash
+screen -t axel 5 -bash
+select 1
+
+altscreen on
+defscrollback 10000
+hardcopydir $HOME
+setenv LC_CTYPE en_US.UTF-8
+shell -bash
+
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{+b m}(%{W}%n*%f%t%?(%u)%?%{m})%{-b w}%?%+Lw%?%?%= %{g}][%{c} %D %M %d %{g}%c %{g}]'
