@@ -5,6 +5,11 @@ fi
 
 # brew
 PATH="/usr/local/sbin:$PATH"
+HOMEBREW_GITHUB_API_TOKEN=
+
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
 
 # colors
 export CLICOLOR=1
