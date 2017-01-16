@@ -43,3 +43,13 @@ export PATH=$GOPATH/bin:$PATH
 
 # composer
 export COMPOSER_DISABLE_XDEBUG_WARN=1
+
+# git
+if [ -f ~/.git-prompt.sh ]; then
+   source ~/.git-prompt.sh
+   export GIT_PS1_SHOWDIRTYSTATE=1
+   export GIT_PS1_SHOWUNTRACKEDFILES=1
+   export GIT_PS1_SHOWUPSTREAM="auto"
+   export GIT_PS1_SHOWCOLORHINTS=1
+   export PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\\$ "'
+fi
