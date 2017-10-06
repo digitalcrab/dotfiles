@@ -1,3 +1,8 @@
 [user]
 	name = Maksim Naumov
 	email = maksim@naumov.org
+[core]
+	excludesfile = $HOME/.gitignore
+
+[credential]
+	helper = store
