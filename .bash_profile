@@ -51,7 +51,7 @@ export PATH="$PATH:$HOME/.composer/vendor/bin"
 # forks
 export UPDATE_FORKS_KEY=
 
-# git
+# git (see https://github.com/git/git/tree/master/contrib/completion)
 if [ -f ~/.git-prompt.sh ]; then
    source ~/.git-prompt.sh
    export GIT_PS1_SHOWDIRTYSTATE=1
@@ -59,4 +59,8 @@ if [ -f ~/.git-prompt.sh ]; then
    export GIT_PS1_SHOWUPSTREAM="auto"
    export GIT_PS1_SHOWCOLORHINTS=1
    export PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\\$ "'
+fi
+
+if [ -f ~/.git-completion.bash ]; then
+   source ~/.git-completion.bash
 fi
