@@ -37,12 +37,19 @@ alias mkdir='mkdir -p'
 # the fuck
 alias fuck='eval $(thefuck $(fc -ln -1)); history -r'
 
+# weather
+alias weather='curl -s wttr.in/Berlin'
+
 # go
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH
 
 # composer
 export COMPOSER_DISABLE_XDEBUG_WARN=1
+export PATH="$PATH:$HOME/.composer/vendor/bin"
+
+# forks
+export UPDATE_FORKS_KEY=
 
 # git
 if [ -f ~/.git-prompt.sh ]; then
