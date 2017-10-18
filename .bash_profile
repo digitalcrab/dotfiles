@@ -1,5 +1,8 @@
+# Java
+export JAVA_HOME=$(/usr/libexec/java_home)
+
 # brew
-PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
 
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
