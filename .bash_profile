@@ -1,11 +1,5 @@
-# other source
-if [ -f ~/.bashrc ]; then
-   source ~/.bashrc
-fi
-
 # brew
 PATH="/usr/local/sbin:$PATH"
-HOMEBREW_GITHUB_API_TOKEN=
 
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
@@ -48,9 +42,6 @@ export PATH=$GOPATH/bin:$PATH
 export COMPOSER_DISABLE_XDEBUG_WARN=1
 export PATH="$PATH:$HOME/.composer/vendor/bin"
 
-# forks
-export UPDATE_FORKS_KEY=
-
 # git (see https://github.com/git/git/tree/master/contrib/completion)
 if [ -f ~/.git-prompt.sh ]; then
    source ~/.git-prompt.sh
@@ -63,4 +54,9 @@ fi
 
 if [ -f ~/.git-completion.bash ]; then
    source ~/.git-completion.bash
+fi
+
+# other source
+if [ -f ~/.bashrc ]; then
+   source ~/.bashrc
 fi
