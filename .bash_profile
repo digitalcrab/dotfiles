@@ -52,7 +52,7 @@ if [ -f ~/.git-prompt.sh ]; then
    export GIT_PS1_SHOWUNTRACKEDFILES=1
    export GIT_PS1_SHOWUPSTREAM="auto"
    export GIT_PS1_SHOWCOLORHINTS=1
-   export PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\\$ "'
+   export PROMPT_COMMAND='__git_ps1 "$(if [[ $? == 0 ]]; then echo "\[\e[32m\]\\\$"; else echo "\[\e[31m\]\\\$"; fi)\[\e[0m\] \u@\h:\w" "\n\\\$ "'
 fi
 
 if [ -f ~/.git-completion.bash ]; then
