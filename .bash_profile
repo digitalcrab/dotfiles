@@ -2,8 +2,6 @@
 export JAVA_HOME=$(/usr/libexec/java_home)
 
 # brew
-export PATH="/usr/local/sbin:$PATH"
-
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
@@ -38,12 +36,9 @@ alias fuck='eval $(thefuck $(fc -ln -1)); history -r'
 alias weather='curl -s wttr.in/Berlin'
 
 # go
+export GO111MODULE=on
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH
-
-# composer
-export COMPOSER_DISABLE_XDEBUG_WARN=1
-export PATH="$PATH:$HOME/.composer/vendor/bin"
 
 # git (see https://github.com/git/git/tree/master/contrib/completion)
 if [ -f ~/.git-prompt.sh ]; then
